@@ -209,12 +209,16 @@ public class utilities {
                                 boolean crearCarpeta = carpetaDondeSeGuardanLasImagenesRenombradas.mkdir();
                                 System.out.println("Se creo la nueva carpeta destino " + carpetaDondeSeGuardanLasImagenesRenombradas);
                             }
-                            //     nombreDelaVariable =  nueva carpeta ||      nombre de la imagen    || etiqueta para que se identifiquela nueva imagen || mas la extension de la imagen
-                            //String renombradoDeImagenes=etiquetaConLaQueSeRenombrara+"_"+nombreDeLaImagen; //Se genera la una variable nueva para concatenar los valores
-                            System.out.println("ruta Fin " + nombreDeLaImagen);
-                            Path destino = Paths.get(rutaDondeVoyADepositarLasImagenesRenombradas + "\\" + nombreDeLaImagen);
-                            Files.copy(origen, destino, StandardCopyOption.REPLACE_EXISTING);
-                            System.out.println("Se renombro la imagen a " + destino);
+                            System.out.println("Se obtiene el nombre de la imagen  " + nombreDeLaImagen); //Impresion para ver el nombre de la imagen
+                            String rutaDestinoConcatenada=rutaDondeVoyADepositarLasImagenesRenombradas+"\\"+nombreDeLaImagen; //Se crea la variable para concatenar toda la ruta destino
+                            Path destino = Paths.get(rutaDestinoConcatenada); //Se declara la variable destino para que obtenta la ruta del directorio
+                            System.out.println("El valor de la variable destino "+ destino); //Se imprime
+                            //Si existe la imagen hay que borrarla
+                            if(Files.deleteIfExists(destino)){
+                                System.out.println("Se elimino una imagen anterior con el nombre: " + destino.toUri() + " con exito"); //Mandamos el mensaje de que se elimino la captura
+                            }// en caso de que no se prosigue
+                            FileUtils.copyFile(origen.toFile(), new File(destino.toUri()));
+                            System.out.println("Se cambio la imagen a la nueva ruta " + destino);
                         } catch (IOException e) {
                             System.out.println("Error al copiar: " + e.getMessage());
                         }
