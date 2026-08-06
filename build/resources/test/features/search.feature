@@ -1,12 +1,12 @@
 Feature: Busqueda de productos en Liverpool
 
-  @Scenario1
+  @Brenda
   Scenario: Buscar un producto desde la home
     Given El usuario abre la pagina "urlLiverpool2" en el navegador
     #Then El usuario espera 10 segundos
     When navego al menu de categorias
     When selecciono la categoria Mujer
-    Then finaliza el test "Scenario1" y se cierra navegador
+    Then finaliza el test "Brenda" y se cierra navegador
 
     #When selecciono la categoria Chamarras
 
