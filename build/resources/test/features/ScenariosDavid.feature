@@ -5,6 +5,8 @@ Feature: Escenarios creados por david
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   Scenario: prueba 1
     Given El usuario abre la pagina "urlDavid" en el navegador de "chrome"
 
@@ -16,4 +18,5 @@ Feature: Escenarios creados por david
     #When El usuario espera 10 segundos
     Then finaliza el test "prueba2" y se cierra navegador
 >>>>>>> ab360dc9638b8916d3b1a775bd022ba44ddb2052
+>>>>>>> 3b621213fbb7b0188315c555ff25e156e4d3d768
 
