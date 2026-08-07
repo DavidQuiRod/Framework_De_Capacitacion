@@ -24,7 +24,7 @@ public class SearchSteps {
         homePage.open();
     }
     @Given("El usuario abre la pagina {string} en el navegador")
-    public void openUrlEnNavegador(String url){
+    public void openUrlEnNavegador(String url) throws Exception{
         homePage = new HomePage(DriverManager.getDriver());
         homePage.abrirNavegadorConLaUrlDesdeHomePage(url);
     }
