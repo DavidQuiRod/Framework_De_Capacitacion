@@ -1,7 +1,7 @@
 Feature: Escenarios creados por Eduardo
 
-  Scenario: Scenario: 1Eduardo
-    Given Iniciar navegador
-    When Iniciamos navegador vamos a la pagina url
-    Then damos clic al boton inicio
-    And esperamos a que cargue la pagina
+  Scenario: prueba 1
+    Given El usuario abre la pagina "url1Eduardo" en el navegador de "chrome"
+
+  Scenario: prueba 2
+    Given El usuario abre la pagina "url1Eduardo" en el navegador de "chrome"
