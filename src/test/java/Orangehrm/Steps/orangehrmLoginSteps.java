@@ -13,7 +13,10 @@ public class orangehrmLoginSteps {
 
     @And("El usuario ingresa el Username {string}")
     public void ingresarUnValorEnUsername(String valueUsername) {
-        //homePage = new HomePage(DriverManager.getDriver());
+        accionesDeLogin = new orangehrmLoginPageObjects(DriverManager.getDriver());
+        String nombreDeCampoUsername = "userName";
+        accionesDeLogin.elUsuarioIngresaValorenUserName(valueUsername,nombreDeCampoUsername);
+
     }
 
     @And("El usuario ingresa el Password {string}")
