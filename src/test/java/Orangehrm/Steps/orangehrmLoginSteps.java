@@ -1,0 +1,29 @@
+package Orangehrm.Steps;
+
+import io.cucumber.java.en.And;
+import liverpool.core.DriverManager;
+import liverpool.pages.HomePage;
+import Orangehrm.PageObjects.orangehrmLoginPageObjects;
+
+
+public class orangehrmLoginSteps {
+
+    private HomePage homePage;
+    orangehrmLoginPageObjects accionesDeLogin;
+
+    @And("El usuario ingresa el Username {string}")
+    public void ingresarUnValorEnUsername(String valueUsername) {
+        //homePage = new HomePage(DriverManager.getDriver());
+    }
+
+    @And("El usuario ingresa el Password {string}")
+    public void ingresarUnValorEnPassword(String valuePassword) {
+        //homePage = new HomePage(DriverManager.getDriver());
+    }
+
+    @And("Hacer clic en el boton Login")
+    public void darClicEnLogin() {
+        //homePage = new HomePage(DriverManager.getDriver());
+    }
+
+}
