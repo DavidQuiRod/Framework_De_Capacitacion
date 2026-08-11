@@ -11,6 +11,7 @@ Scenario: prueba 1
     When El usuario espera 10 segundos
     Then finaliza el test "prueba2" y se cierra navegador
 
+
     @prueba3
     Scenario:  prueba 3
       Given El usuario abre la pagina "urlJavier" en el navegador
