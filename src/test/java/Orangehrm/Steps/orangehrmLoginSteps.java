@@ -32,4 +32,10 @@ public class orangehrmLoginSteps {
         //homePage = new HomePage(DriverManager.getDriver());
     }
 
+    @And("El usuario da clic en boton Admin")
+    public void darClicEnAdmin() {
+        accionesDeLogin = new orangehrmLoginPageObjects(DriverManager.getDriver());
+        accionesDeLogin.elUsuarioDaClicEnAdmin();
+        //homePage = new HomePage(DriverManager.getDriver());
+    }
 }

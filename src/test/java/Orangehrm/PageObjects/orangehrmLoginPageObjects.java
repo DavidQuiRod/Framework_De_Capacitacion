@@ -28,6 +28,8 @@ public class orangehrmLoginPageObjects {
     private WebElement ingresaPassword;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
     public WebElement botonLogin;
+    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span")
+    public WebElement botonAdmin;
 
     //constructor
     public orangehrmLoginPageObjects(WebDriver driver) {
@@ -88,6 +90,18 @@ public class orangehrmLoginPageObjects {
         }
     }
 
-
-
+    // Funcion dar clic Login
+    public void elUsuarioDaClicEnAdmin() {
+        utilsFuntions = new utilities(driver);
+        try{
+            utilsFuntions.hightLight(botonAdmin);
+            utilsFuntions.takeScrenShot("Se da un clic en boton Admin");
+            utilsFuntions.unHightLight(botonAdmin);
+            botonAdmin.click();
+        }catch (Exception e){
+            System.out.println("No se logro dar clic al boton Admin");
+            utilsFuntions.finPrueba();
+            throw  e;
+        }
+    }
 }
