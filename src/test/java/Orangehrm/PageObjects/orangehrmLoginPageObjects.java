@@ -1,8 +1,5 @@
 package Orangehrm.PageObjects;
 
-import java.nio.file.Files;
-import java.time.Duration;
-import java.io.*;
 import java.util.Properties;
 
 import org.openqa.selenium.support.PageFactory;
@@ -11,10 +8,6 @@ import utils.utilities;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import liverpool.locators.HomeLocators;
 
 public class orangehrmLoginPageObjects {
     utilities utilsFuntions;
@@ -28,6 +21,11 @@ public class orangehrmLoginPageObjects {
     private WebElement ingresaPassword;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
     public WebElement botonLogin;
+    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a")
+    public WebElement botonPIM;
+
+    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[3]/a")
+    public WebElement opcionLeave;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span")
     public WebElement botonAdmin;
 
@@ -100,6 +98,35 @@ public class orangehrmLoginPageObjects {
             botonAdmin.click();
         }catch (Exception e){
             System.out.println("No se logro dar clic al boton Admin");
+            utilsFuntions.finPrueba();
+            throw  e;
+        }
+    }
+    // Funcion dar clic en PIM
+    public void elUsuarioDaClicEnPIM() {
+        utilsFuntions = new utilities(driver);
+        try{
+            utilsFuntions.hightLight(botonPIM);
+            utilsFuntions.takeScrenShot("Se da un clic en boton PIM");
+            utilsFuntions.unHightLight(botonPIM);
+            botonPIM.click();
+        }catch (Exception e){
+            System.out.println("No se logro dar clic al boton PIM");
+            utilsFuntions.finPrueba();
+            throw  e;
+        }
+    }
+
+    // Funcion seleccionar opcion Leave
+    public void elUsuarioseleccionaOpcionLeave() {
+        utilsFuntions = new utilities(driver);
+        try{
+            utilsFuntions.hightLight(opcionLeave);
+            utilsFuntions.takeScrenShot("Se da clic en la opcion Leave");
+            utilsFuntions.unHightLight(opcionLeave);
+            opcionLeave.click();
+        }catch (Exception e){
+            System.out.println("No se encontró la opcion Leave, del menu lateral" );
             utilsFuntions.finPrueba();
             throw  e;
         }
