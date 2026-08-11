@@ -38,4 +38,10 @@ public class orangehrmLoginSteps {
         accionesDeLogin = new orangehrmLoginPageObjects(DriverManager.getDriver());
         accionesDeLogin.elUsuarioseleccionaOpcionLeave();
     }
+    @And("Hacer clic en el boton PIM")
+    public void darClicEnPIM() {
+        accionesDeLogin = new orangehrmLoginPageObjects(DriverManager.getDriver());
+        accionesDeLogin.elUsuarioDaClicEnPIM();
+        //homePage = new HomePage(DriverManager.getDriver());
+    }
 }
