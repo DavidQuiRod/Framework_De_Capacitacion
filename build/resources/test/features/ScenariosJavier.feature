@@ -5,8 +5,8 @@ Feature: Escenarios creados por Javier
   #
   ##Que vamos a calificar los moderadores
   ##1.- Que funcione su escenario x
-  ##2.- Reutilizacion de codigo y funciones que existen dentro del framework
-  ##3.- Una evidencia limpia
+  ##2.- Reutilizacion de codigo y funciones que existen dentro del framework x
+  ##3.- Una evidencia limpia x
   ##4.- Congruencia en el scenario se cumple el 90 de escenario por las etiquetas
   #
   ##Nota Punto extra el que termine primero
