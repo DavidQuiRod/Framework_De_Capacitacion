@@ -11,13 +11,22 @@ Scenario: prueba 1
     When El usuario espera 10 segundos
     Then finaliza el test "prueba2" y se cierra navegador
 
-
-    @prueba3
-    Scenario:  prueba 3
+    @prueba3Javier
+    Scenario:  prueba 3 Javier
       Given El usuario abre la pagina "urlJavier" en el navegador
-      When El usuario espera 10 segundos
       And El usuario ingresa el Username "Admin"
-      And El usuario ingresa el Password "admin123"
+      When El usuario espera 5 segundos
+      #And El usuario ingresa el Password "admin123"
       Then Hacer clic en el boton Login
-      When El usuario espera 10 segundos
-      Then finaliza el test "prueba3" y se cierra navegador
+      Then finaliza el test "prueba3Javier" y se cierra navegador
+
+  @prueba4TeamAutomation
+  Scenario:  prueba 4 TeamAutomation
+    Given El usuario abre la pagina "urlJavier" en el navegador
+    And El usuario ingresa el Username "Admin"
+    When El usuario espera 2 segundos
+    And El usuario ingresa el Password "admin123"
+    When El usuario espera 2 segundos
+    Then Hacer clic en el boton Login
+    When El usuario espera 2 segundos
+    Then finaliza el test "prueba4TeamAutomation" y se cierra navegador

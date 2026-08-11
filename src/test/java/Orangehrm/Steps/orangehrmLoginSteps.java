@@ -13,16 +13,23 @@ public class orangehrmLoginSteps {
 
     @And("El usuario ingresa el Username {string}")
     public void ingresarUnValorEnUsername(String valueUsername) {
-        //homePage = new HomePage(DriverManager.getDriver());
+        accionesDeLogin = new orangehrmLoginPageObjects(DriverManager.getDriver());
+        String nombreDeCampoUserName = "userName";
+        accionesDeLogin.elUsuarioIngresaValorenUserName(valueUsername,nombreDeCampoUserName);
+
     }
 
     @And("El usuario ingresa el Password {string}")
     public void ingresarUnValorEnPassword(String valuePassword) {
-        //homePage = new HomePage(DriverManager.getDriver());
+        accionesDeLogin = new orangehrmLoginPageObjects(DriverManager.getDriver());
+        String nombreDeCampoPassword = "Password";
+        accionesDeLogin.elUsuarioIngresaValorenPasword(valuePassword,nombreDeCampoPassword);
     }
 
     @And("Hacer clic en el boton Login")
     public void darClicEnLogin() {
+        accionesDeLogin = new orangehrmLoginPageObjects(DriverManager.getDriver());
+        accionesDeLogin.elUsuarioDaClicEnLogin();
         //homePage = new HomePage(DriverManager.getDriver());
     }
 
