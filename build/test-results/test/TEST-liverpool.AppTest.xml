@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="liverpool.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-08-11T06:02:34.684Z" hostname="PF4N4LMS" time="0.035">
   <properties/>
   <testcase name="dummyTest" classname="liverpool.AppTest" time="0.006"/>
+=======
+<testsuite name="liverpool.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-08-10T21:53:33.639Z" hostname="7QWNVV3" time="0.033">
+  <properties/>
+  <testcase name="dummyTest" classname="liverpool.AppTest" time="0.007"/>
+>>>>>>> 274084138691cb353c48c8afb34d093421fc75cb
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
