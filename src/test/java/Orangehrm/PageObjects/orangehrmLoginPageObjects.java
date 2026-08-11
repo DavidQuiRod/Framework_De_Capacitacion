@@ -1,8 +1,5 @@
 package Orangehrm.PageObjects;
 
-import java.nio.file.Files;
-import java.time.Duration;
-import java.io.*;
 import java.util.Properties;
 
 import org.openqa.selenium.support.PageFactory;
@@ -11,10 +8,6 @@ import utils.utilities;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import liverpool.locators.HomeLocators;
 
 public class orangehrmLoginPageObjects {
     utilities utilsFuntions;
@@ -28,6 +21,8 @@ public class orangehrmLoginPageObjects {
     private WebElement ingresaPassword;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
     public WebElement botonLogin;
+    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[3]/a")
+    public WebElement opcionLeave;
 
     //constructor
     public orangehrmLoginPageObjects(WebDriver driver) {
@@ -56,6 +51,7 @@ public class orangehrmLoginPageObjects {
     }
 
     //Funcion password
+
     public void elUsuarioIngresaValorenPassword(String valuePassword, String nombreDePassword) {
         //inrucciones que voy a hacer con los parametros recibidos
         utilsFuntions = new utilities(driver);
@@ -88,6 +84,18 @@ public class orangehrmLoginPageObjects {
         }
     }
 
-
-
+    // Funcion seleccionar opcion Leave
+    public void elUsuarioseleccionaOpcionLeave() {
+        utilsFuntions = new utilities(driver);
+        try{
+            utilsFuntions.hightLight(opcionLeave);
+            utilsFuntions.takeScrenShot("Se da clic en la opcion Leave");
+            utilsFuntions.unHightLight(opcionLeave);
+            opcionLeave.click();
+        }catch (Exception e){
+            System.out.println("No se encontró la opcion Leave, del menu lateral" );
+            utilsFuntions.finPrueba();
+            throw  e;
+        }
+    }
 }

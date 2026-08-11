@@ -1,6 +1,7 @@
 package Orangehrm.Steps;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import liverpool.core.DriverManager;
 import liverpool.pages.HomePage;
 import Orangehrm.PageObjects.orangehrmLoginPageObjects;
@@ -32,4 +33,9 @@ public class orangehrmLoginSteps {
         //homePage = new HomePage(DriverManager.getDriver());
     }
 
+    @And("El usuario da clic en la opcion Leave")
+    public void seleccionarOpcionLeave() {
+        accionesDeLogin = new orangehrmLoginPageObjects(DriverManager.getDriver());
+        accionesDeLogin.elUsuarioseleccionaOpcionLeave();
+    }
 }
