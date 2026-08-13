@@ -1,7 +1,7 @@
 package Orangehrm.PageObjects;
 
-import java.time.Duration;
 import java.util.Properties;
+
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.utilities;
@@ -21,10 +21,11 @@ public class orangehrmLoginPageObjects {
     private WebElement ingresaUsuario;
     @FindBy(how= How.XPATH, using = "//div//input[@placeholder = 'Password']")
     private WebElement ingresaPassword;
-    @FindBy(how= How.XPATH, using = "//div//button[@type = 'submit']")
+    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
     public WebElement botonLogin;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a")
     public WebElement botonPIM;
+
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[3]/a")
     public WebElement opcionLeave;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span")
