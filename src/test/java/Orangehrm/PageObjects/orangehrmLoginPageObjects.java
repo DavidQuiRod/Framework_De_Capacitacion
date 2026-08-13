@@ -24,9 +24,9 @@ public class orangehrmLoginPageObjects {
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a")
     public WebElement botonPIM;
 
-    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[3]/a")
+    @FindBy(how= How.XPATH, using = "//span[text()='Leave']") //Se cambiaron estos xpaths para practica_Eduardo
     public WebElement opcionLeave;
-    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span")
+    @FindBy(how= How.XPATH, using = "//span[text()='Admin']") //Se cambiaron estos xpaths para practica_Eduardo
     public WebElement botonAdmin;
 
     //constructor
