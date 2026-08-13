@@ -19,9 +19,9 @@ public class orangehrmLoginPageObjects {
     private WebElement ingresaUsuario;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")
     private WebElement ingresaPassword;
-    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
+    @FindBy(how= How.XPATH, using = "//button[text()=' Login ']")
     public WebElement botonLogin;
-    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a")
+    @FindBy(how= How.XPATH, using = "//span[text()='PIM']")
     public WebElement botonPIM;
 
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[3]/a")

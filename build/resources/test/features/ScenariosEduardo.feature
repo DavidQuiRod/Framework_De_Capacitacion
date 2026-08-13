@@ -8,7 +8,7 @@ Feature: Escenarios creados por Eduardo
     And El usuario ingresa el Password "admin123"
     When El usuario espera 2 segundos
     Then Hacer clic en el boton Login
-    When El usuario espera 5 segundos
+    When El usuario espera 10 segundos
     Then Hacer clic en el boton PIM
     When El usuario espera 4 segundos
     Then finaliza el test "Ejercicio_Eduardo" y se cierra navegador
