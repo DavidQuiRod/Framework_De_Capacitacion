@@ -1,8 +1,9 @@
 package Orangehrm.PageObjects;
 
+import java.time.Duration;
 import java.util.Properties;
-
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.utilities;
 
 import org.openqa.selenium.*;
@@ -15,15 +16,15 @@ public class orangehrmLoginPageObjects {
     private final WebDriver driver;
     String directorio = System.getProperty("user.dir");
     //objetos web pagina orange
-    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")
+    //Se cambiaron estos xpaths para practica
+    @FindBy(how= How.XPATH, using = "//div//input[@placeholder = 'Username']")
     private WebElement ingresaUsuario;
-    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")
+    @FindBy(how= How.XPATH, using = "//div//input[@placeholder = 'Password']")
     private WebElement ingresaPassword;
-    @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
+    @FindBy(how= How.XPATH, using = "//div//button[@type = 'submit']")
     public WebElement botonLogin;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a")
     public WebElement botonPIM;
-
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[3]/a")
     public WebElement opcionLeave;
     @FindBy(how= How.XPATH, using = "//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span")
